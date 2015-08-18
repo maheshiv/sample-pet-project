@@ -1,5 +1,5 @@
 
-# wine (wine)
+# Pet project for learning
 
 > Pet project
 
