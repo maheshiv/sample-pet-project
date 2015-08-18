@@ -8,7 +8,7 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 import size from 'size-decorator';
 import invariant from './fixed-data-table-ice/internal/invariant.js';
 import PureRenderer from '../pure_renderer/pure_renderer.jsx';
-import anim from '../../utils/anim.js';
+import anim from '../../../utils/anim.js';
 import debounceCore from './fixed-data-table-ice/internal/debounceCore.js';
 
 import IceFixedTableHolder from './ice_fixed_table_holder.jsx';

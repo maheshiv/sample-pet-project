@@ -4,7 +4,7 @@ const raf = (typeof window !== 'undefined') && (window.requestAnimationFrame ||
   window.msRequestAnimationFrame ||
   ((cb) => { return window.setTimeout(cb, 1000 / 60); }));
 
-const easing = require('utils/easing');
+const easing = require('./easing');
 
 export default function(deltaT, from, to, easeName, callback) {
   const dtStart = (new Date()).getTime();

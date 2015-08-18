@@ -27,18 +27,18 @@ const markerDescriptions = [
   {
     size: {width: 61, height: 65},
     origin: {x: 24 / 61, y: 63 / 65},
-    image: require('icons/map_icons/map_icon_flag_orange.svg'),
+    /*image: require('icons/map_icons/map_icon_flag_orange.svg'),*/
     hintType: 'hint--error'
   },
   {
     size: {width: 49, height: 64},
     origin: {x: 0.5, y: 1},
-    image: require('icons/map_icons/map_icon_std.svg')
+    /*image: require('icons/map_icons/map_icon_std.svg')*/
   },
   {
     size: {width: 49, height: 64},
     origin: {x: 0.5, y: 1},
-    image: require('icons/map_icons/map_icon_std_orange.svg')
+    /*image: require('icons/map_icons/map_icon_std_orange.svg')*/
   }
 ];
 

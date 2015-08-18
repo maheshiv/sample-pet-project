@@ -5,7 +5,7 @@ import MainMapLayout from './main_map_layout.jsx';
 import IceTable from './controls/fixed_table_examples/ice_table.jsx';
 import MainMapBlock from './main_map_block.jsx';
 
-import { Connector } from 'redux/react';
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import * as allMapActions from '../actions/map_actions.js';
@@ -34,7 +34,7 @@ export default class Gmap extends Component {
 
   _renderMap() {
     return (
-      <Connector select={state => ({
+      <connect select={state => ({
           center: state.map.get('mapInfo').get('center'),
           zoom: state.map.get('mapInfo').get('zoom'),
           markers: state.map.get('dataFiltered'),
@@ -45,19 +45,19 @@ export default class Gmap extends Component {
           openBallonIndex: state.map.get('openBalloonIndex')
         })}>
         {({dispatch, ...mapProps}) => (<MainMapBlock {...mapProps} {...bindActionCreators(mapActions, dispatch)} />)}
-      </Connector>
+      </connect>
     );
   }
 
   _renderTable() {
     return (
-      <Connector select={state => ({
+      <connect select={state => ({
           markers: state.map.get('dataFiltered'),
           hoveredMapRowIndex: state.map.get('hoverMarkerIndex'),
           resetToStartObj: state.map.get('mapInfo')
         })}>
         {({dispatch, ...tableProps}) => (<IceTable {...tableProps} {...bindActionCreators(tableActions, dispatch)} />)}
-      </Connector>
+      </connect>
     );
   }
 

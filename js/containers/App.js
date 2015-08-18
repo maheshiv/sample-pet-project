@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {createStore, renderDevTools} from '../utils/devTools';
 
 import * as reducers from '../reducers/index';
-import Home from '../components/Home';
+import Home from '../components/Gmap';
 
 const store = createStore(combineReducers(reducers));
 
